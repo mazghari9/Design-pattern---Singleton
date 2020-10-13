@@ -1,9 +1,9 @@
-/* ------- ExÈcution ParallËle ------- */
+/* ------- Ex√©cution Parall√®le ------- */
 import java.util.concurrent.*; 
 public class Client extends Thread{
 	
-	Semaphore sem;	
-	String threadName; 
+	Semaphore sem;	//un s√©maphore pour la synchronisation
+	String threadName;//le nom de thread 
     
 	public Client(Semaphore sem, String threadName)  
     { 
@@ -12,6 +12,7 @@ public class Client extends Thread{
         this.threadName = threadName; 
     } 
 	
+	//la fonction run pour d√©marrer le processus de cr√©ation de l'objet Terre
 	public void run(){
 		try 
         { 
@@ -49,7 +50,7 @@ public class Client extends Thread{
 	}
 }
 
-/* ------- ExÈcution sÈquentiel ------- */
+/* ------- Ex√©cution s√©quentiel ------- */
 /*
 public class Client{
 	
